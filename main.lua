@@ -21,7 +21,6 @@ function Logo:update(dt)
    if self.x_main_logo <  50 then
       self.x_main_logo = self.x_main_logo + 800 * dt
       Loki:particle_system_load(self.w, self.h, 300, {1, 6}, {0.7, 1.0}, {-2.0, 2.0})
-
    else
       Loki:particle_system_update(self.w, self.h, {0.4554, 0.999})
       self.x_main_logo = 50
@@ -46,6 +45,7 @@ function love.load()
    love.img_mouse = love.graphics.newImage("cursor.png")
    Scene:load()
    end
+
 function love.update(dt)
    Scene:update(dt)
 end
